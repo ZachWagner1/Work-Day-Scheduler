@@ -16,12 +16,12 @@ function createTask(time) {
     var hour = moment(time, 'h');
     var hourView = hour.format('hA');
 
-    var groupInput = $("<div>").addClass("group-input");
-    var groupInputEl = $("<div>").addClass("group-input-element");
-    var timeSpan = $("<span>").addClass("group-input-text hour").text(hourView);
-    var taskEl = $('<textarea>').addClass('form-contrl').attr('data-id', time);
-    var groupInputAppendEl = $('<div>').addClass('group-input-append');
-    var saveBtn = $('<span>').addClass('group-input-text saveBtn').attr('data-id', time);
+    var groupInput = $("<div>").addClass("input-group");
+    var groupInputEl = $("<div>").addClass("input-group-element");
+    var timeSpan = $("<span>").addClass("input-group-text hour").text(hourView);
+    var taskEl = $('<textarea>').addClass('form-control').attr('data-id', time);
+    var groupInputAppendEl = $('<div>').addClass('input-group-append');
+    var saveBtn = $('<span>').addClass('input-group-text saveBtn').attr('data-id', time);
     var calendarPic = $('<i>').addClass('fas fa-calendar-plus');
 
     groupInputAppendEl.append(saveBtn);
@@ -61,7 +61,7 @@ function saveTask() {
     localStorage.setItem('tasksLocal', JSON.stringify(tasksArr));
 }
 
-function loadtask() {
+function loadTask() {
 	var tasksLocal = localStorage.getItem('tasksLocal');
 	tasksLocal = JSON.parse(tasksLocal);
 	console.log(tasksLocal);
