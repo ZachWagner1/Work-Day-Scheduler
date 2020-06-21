@@ -71,7 +71,7 @@ function loadTask() {
 	}
 
 	for (var i = 0; i < tasksLocal.length; i++) {
-		$('.form-control[data-id="' + tasksLocal[i].id + '"]').val(tasksLocal[i].eventText);
+		$('.form-control[data-id="' + tasksLocal[i].id + '"]').val(tasksLocal[i].taskText);
 	}
 	return tasksLocal;
 }
