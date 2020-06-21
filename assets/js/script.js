@@ -64,7 +64,6 @@ function saveTask() {
 function loadTask() {
 	var tasksLocal = localStorage.getItem('tasksLocal');
 	tasksLocal = JSON.parse(tasksLocal);
-	console.log(tasksLocal);
 
 	if (!tasksLocal) {
 		return false;
